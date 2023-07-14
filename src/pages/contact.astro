@@ -1,0 +1,70 @@
+---
+import Nav from "../components/Nav.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+    main {
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+    .grid {
+        margin-top: 20px;
+        display: flex;
+    }
+    .grid div {
+        width: 40%;
+    }
+    #other {
+        margin-top: 30px;
+    }
+    h2,
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+    .social {
+        margin-bottom: 6px;
+    }
+</style>
+
+<Layout>
+    <main>
+        <Nav />
+        <div class="grid">
+            <div>
+                <h2 id="contact">Contact Information</h2>
+                <h4>Email</h4>
+                <p>kishmat17@gmail.com</p>
+                <h3>Social Media</h3>
+                <ul style="margin-top: 30px;">
+                    <li class="social"><a href="">Github</a></li>
+                    <li class="social">
+                        <a href="https://twitter.com/spdiLf">Twitter</a>
+                    </li>
+                    <li class="social">
+                        <a href="https://www.youtube.com/@kishmatbhattarai"
+                            >Youtube</a
+                        >
+                    </li>
+                    <li class="social"><a href="">Telegram</a></li>
+                    <li class="social">
+                        <a href="https://data-folks.masto.host/@kishmat"
+                            >Mastodon</a
+                        >
+                    </li>
+                    <li class="social"><a href="">Tumblr</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 id="other">Other Information</h4>
+                <p>Discord</p>
+                <div>
+                    kishmat - Please note that Discord will automatically reject
+                    friend requests if you are not in a mutual server with me. I
+                    don't have control over this behavior.
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
