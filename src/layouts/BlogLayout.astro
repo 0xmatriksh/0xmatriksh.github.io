@@ -1,0 +1,43 @@
+---
+import Nav from "../components/Nav.astro";
+const {frontmatter} = Astro.props
+const date = new Date(frontmatter.pubDate).toDateString()
+---
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap");
+
+    * {
+        background-color: #F2F9EA ;
+        font-family: "K2D", sans-serif;
+    }
+    #content{
+        font-size: 17px;
+        width: 95%;
+        padding: 10px;
+    }
+    h2{
+        margin-bottom: 3px;
+    }
+    #pub-date{
+        font-size: 15px;
+        margin: 0;
+    }
+</style>
+
+<html>
+    <head>
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <Nav/>
+        <header>
+            <h2 id="title">{frontmatter.title}</h2>
+            <p id="pub-date">Published On: <em>{date  }</em></p>
+        </header>
+        <div class="post-content" id="content" >
+            <slot />
+        </div>
+        <hr />
+    </body>
+</html>
